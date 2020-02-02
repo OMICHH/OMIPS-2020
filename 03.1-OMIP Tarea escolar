@@ -1,0 +1,25 @@
+class program {
+define turn(n){
+	iterate(n){
+    	turnleft();
+    }
+}
+define fn(){
+	if(nextToABeeper){
+      	pickbeeper();
+        fn();
+        putbeeper();
+        turn(2);
+    }else if(frontIsClear){
+    	turn(3);
+        move();
+        fn();
+    }
+}
+    program () {
+
+      fn();
+      
+        turnoff();
+    }
+}
