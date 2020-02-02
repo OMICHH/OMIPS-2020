@@ -1,0 +1,27 @@
+class program {
+define deja(n){
+	if(anyBeepersInBeeperBag){
+      putbeeper();
+      iterate(n){
+      	putbeeper();
+      }
+      if(frontIsClear){
+      	move();
+      }
+      deja(succ(n));
+    }
+}
+define turn(n){
+	iterate(n){
+    	turnleft();
+    }
+}
+    program () {
+        while(nextToABeeper){
+        	pickbeeper();
+        }
+        turn(3);
+        deja(0);
+        turnoff();
+    }
+}
