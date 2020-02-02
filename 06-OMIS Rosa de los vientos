@@ -1,0 +1,76 @@
+class program {
+	define lineas(){
+		 if(nextToABeeper){
+        	pickbeeper();
+            lineas();
+            putbeeper();
+            if(anyBeepersInBeeperBag){
+            	move();
+            }
+        }
+    }
+    define dibujaLineas(){
+    	iterate(4){
+    	move();
+    	lineas();
+        iterate(2){
+        	turnleft();
+        }
+        move();
+        while(nextToABeeper){
+        	move();
+        }
+        turnleft();
+    	}
+    }
+    define diagonales(){
+    	if(nextToABeeper){
+        	pickbeeper();
+            diagonales();
+            putbeeper();
+            if(anyBeepersInBeeperBag){
+              move();
+              iterate(3){
+                  turnleft();
+              }
+            move();
+            turnleft();
+           }
+        }
+    }
+    define dibujaDiagonales(){
+    	move();
+        iterate(3){
+        	turnleft();
+        }
+        move();
+        turnleft();
+        diagonales();
+        iterate(2){
+        	turnleft();
+        }
+        move();
+        iterate(3){
+        	turnleft();
+        }
+        move();
+        turnleft();
+     while(nextToABeeper){   
+        move();
+        iterate(3){
+        	turnleft();
+        }
+        move();
+        turnleft();
+      }
+    }
+    program () {
+    	dibujaLineas();
+        dibujaDiagonales();
+        dibujaDiagonales();
+        turnleft();
+        dibujaDiagonales();
+        dibujaDiagonales();
+        turnoff();
+    }
+}
