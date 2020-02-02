@@ -1,0 +1,59 @@
+class program {
+
+define turn(n){
+	iterate(n){
+    	turnleft();
+    }
+}
+define avanzar(){
+	if(frontIsClear){
+    	move();
+    }
+}
+  program () {
+	while(nextToABeeper){
+    	pickbeeper();
+    }
+    
+    while(notFacingNorth){
+    	turn(1);
+    }
+    putbeeper();
+    while(anyBeepersInBeeperBag){
+      if(nextToABeeper){
+          avanzar();
+      }else {
+          turn(3);
+          avanzar();
+          turn(3);
+          while(anyBeepersInBeeperBag&&facingSouth){
+              putbeeper();
+              avanzar();
+              if(frontIsBlocked&&nextToABeeper){
+              	turn(2);
+              }
+          }
+          
+      }
+    }
+    while(frontIsClear&&leftIsClear){
+    while(frontIsClear&&facingNorth&&nextToABeeper){
+ 		avanzar();
+    }
+    turn(2);
+    if(notNextToABeeper){
+    	avanzar();
+    }
+    while(nextToABeeper){
+    	pickbeeper();
+        avanzar();
+    }
+    while(anyBeepersInBeeperBag){
+    	putbeeper();
+    }
+    turn(3);
+    avanzar();
+    turn(3);
+    }
+  }
+}
