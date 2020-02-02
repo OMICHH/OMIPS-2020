@@ -1,0 +1,83 @@
+class program {
+define turn(n){
+	iterate(n){
+    	turnleft();
+    }
+}
+
+define ir1_1(){
+	while(notFacingSouth){
+    	turn(1);
+    }
+    while(frontIsClear){
+    	move();
+    }
+    turn(3);
+    while(frontIsClear){
+    	move();
+    }
+    turn(3);
+}
+
+define buscar(dos){
+	if(notNextToABeeper){
+    	if(frontIsClear){
+        	move();
+        }else if(facingNorth&&rightIsBlocked){
+        	turn(2);
+            while(frontIsClear){
+            	move();
+            }
+        }else if(facingNorth){
+        	turn(3);
+            if(frontIsClear){
+            	move();
+            }else{
+            	ir1_1();
+            }
+            
+            turn(3);
+        }else if(facingSouth){
+        	turn(1);
+            if(frontIsClear){
+            	move();
+            }else if(frontIsBlocked&&rightIsBlocked){
+            	iterate(dos){
+                  iterate(2){
+                  	putbeeper();
+                  }
+            	}
+                turn(2);
+            	while(frontIsClear){
+            		move();
+            	}
+                turn(3);
+            }
+            turn(1);
+        }
+        
+        if(notFacingWest){
+        	buscar(dos);
+        }
+        
+        	
+    
+    }else if(nextToABeeper){
+    	pickbeeper();
+        if(nextToABeeper){
+        	pickbeeper();
+            buscar(succ(dos));
+        }
+        else{
+        	buscar(dos);
+            putbeeper();
+        }
+    }
+}
+
+    program () {
+        ir1_1();
+		buscar(0);
+        turnoff();
+    }
+}
