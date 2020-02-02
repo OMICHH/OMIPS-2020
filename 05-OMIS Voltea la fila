@@ -1,0 +1,33 @@
+class program {
+    define  recursivo(a){
+    	if(nextToABeeper){
+         pickbeeper();
+         recursivo(a);
+         putbeeper();
+        }else{
+        	move();
+            if(nextToABeeper){
+              recursivo(succ(a));
+              move();
+            }else{
+            	iterate(2) {
+                turnleft();
+                }
+                iterate(a){
+                move();
+                }
+                move();
+                iterate(2) {
+                  turnleft();
+                }
+                
+            }
+
+        }
+    }
+
+    program () {
+        recursivo(0);
+        turnoff();
+    }
+}
