@@ -1,0 +1,29 @@
+class program {
+    define turnright(){
+     turnleft();
+     turnleft();
+     turnleft();
+    }
+    define accionesM(x){
+     if(frontIsClear){
+      move();
+      accionesM(succ(x));
+     }
+     turnright();
+     iterate(succ(x)){
+      if(frontIsClear){
+       move();
+      } else {
+       turnleft();
+       turnleft();
+      }
+     }
+     turnoff();
+    }
+    program () {
+        turnleft();
+        turnleft();
+        accionesM(0);
+        turnoff();
+    }
+}
