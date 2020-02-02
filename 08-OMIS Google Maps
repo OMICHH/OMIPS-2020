@@ -1,0 +1,34 @@
+class program {
+	void street(n) {
+    while(notNextToABeeper) {
+    if(frontIsBlocked) {
+           		if(rightIsClear) {
+                	iterate(3) turnleft();
+                    move();
+                    street(0);
+                }
+                if(leftIsClear) {
+                	turnleft();
+                    move();
+                    street(0);
+                }
+           } else {
+    	if(rightIsBlocked && leftIsBlocked) {
+        	iterate(succ(n)) putbeeper();
+        	move();
+            street(succ(n));
+         
+        } else {
+        	move();
+        }
+        }
+    }
+    
+    }
+    program () {
+    while(frontIsClear) move();
+       iterate(2) turnleft();
+       street(0);
+        turnoff();
+    }
+}
