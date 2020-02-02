@@ -1,0 +1,96 @@
+iniciar-programa
+    inicia-ejecucion
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        repetir 2 veces
+        gira-izquierda;
+        avanza;   
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        gira-izquierda;
+        gira-izquierda;
+        avanza;
+        repetir 3 veces 
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        avanza;
+        deja-zumbador;
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+        gira-izquierda;
+        gira-izquierda;
+        avanza;
+        avanza;
+        deja-zumbador;
+        repetir 2 veces
+        gira-izquierda;
+        avanza;
+        gira-izquierda;
+        avanza;
+        avanza;
+        avanza;
+        deja-zumbador;
+        avanza;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        avanza;
+        repetir 3 veces
+        gira-izquierda;
+        avanza;
+        deja-zumbador;
+    termina-ejecucion
+finalizar-programa
